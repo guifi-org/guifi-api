@@ -3,7 +3,12 @@ guifi-api
 
 A Symfony project created on February 12, 2017, 2:46 pm as a playground to develop an API REST for the guifi.net project.
 
-Example of REST API response:
+The [entities](/src/AppBundle/Entity/) have been generated automatically from the [development database of guifi](http://www.guifi.net/guifi66_devel.sql.gz) using the following commad of the [Doctrine tools](http://docs.doctrine-project.org/en/latest/reference/tools.html#reverse-engineering):
+
+```./console orm:convert:mapping --from-database annotation <dest-path>```
+
+
+Also you can found a stub of the REST API for the Zone entity. Below you can find a sample:
 
 ```json
 GET /zones
